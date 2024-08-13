@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -12,7 +15,9 @@ public class Main {
         conditionals(age);
 
         // # Arrays
-        arrays();
+        arrays(); // The length is fixed on initialization
+
+        // # ArrayLists
     }
 
     public static void startingWithVariables() {
@@ -89,6 +94,8 @@ public class Main {
 
     public static void conditionals (short age) {
         // # Conditionals
+        System.out.println("# Conditionals #");
+
         if (age > 18) {
             System.out.println("Adult");
         } else if (age == 18) {
@@ -100,5 +107,34 @@ public class Main {
 
     public static void arrays () {
         // # Arrays
+        System.out.println("# Arrays #");
+        // -> type[] variableName;
+        // There are 2 ways of initializing an array.
+        // One is to set the values when declaring it, and then the length will be fixed.
+        int[] intArray = {1, 2, 3};
+        System.out.print("Array de inteiros: ");
+        System.out.println(Arrays.toString(intArray));
+        // The other is:
+        char[] charArray = new char[4]; //new type[length]
+        charArray[3] = 'd';
+        charArray[2] = 'c';
+        charArray[1] = 'b';
+        charArray[0] = 'a';
+        System.out.print("Array de chars: ");
+        System.out.println(Arrays.toString(charArray));
+    }
+
+    public static void arrayLists () {
+        // # ArrayLists
+        System.out.println("# ArrayLists #");
+
+        // It's a Class from java.util -> Need to import it:
+        // import java.util.arrayList;
+
+        // ArrayLists is made to solve array fixed length problem.
+        // Works as a dynamic list.
+
+        // -> ArrayList<type> variableName
+
     }
 }
