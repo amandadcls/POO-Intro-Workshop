@@ -19,6 +19,9 @@ public class Main {
 
         // # ArrayLists
         arrayLists();
+
+        // # Loops
+        loops();
     }
 
     public static void startingWithVariables() {
@@ -164,5 +167,43 @@ public class Main {
         System.out.print("ArrayList de inteiros: ");
         System.out.println(integerArrayList);
 
+    }
+
+    public static void loops () {
+        // # Loops
+        System.out.println("---------------------------------------------");
+        System.out.println("# Loops #");
+
+        // while and for
+
+        // -> for (type variableName = value; variableName < 10; variableName++ ) {...}
+        /*
+        * type variableName -> Creates the var that will serve as a counter, controlling the cycle.
+        * variableName < 10 -> Represents the condition in which the cycle will keep cycling. Once that comparison returns true, the cycle stops.
+        * variableName++ -> Represents an action that will occur to the variableName everyCycle. Doesn't have to be necessarily ++.
+        * */
+
+        System.out.print("Countdown: ");
+        for (short counter = 10; counter >= 0; counter-- ) {
+            if (counter > 0) System.out.print(counter + " ");
+            else System.out.println("BOOM!!!");
+        }
+
+        // -> while (variableName > 0) {... variableName--;}
+        /*
+         * variableName -> The var has to be declared beforehand, not on the while declaration.
+         * (variableName > 0) -> Represents the condition in which the cycle will keep cycling. Once that comparison returns true, the cycle stops.
+         * variableName--; -> Remember to alter the controlled variable inside the function scope, else it will loop endlessly.
+         * */
+
+        System.out.print("Counter: ");
+        short counter = 0;
+        while (counter <= 10) {
+            if (counter < 10) System.out.print(counter + " ");
+            else System.out.println("YAY!!!");
+
+            // Need to alter counter here, or else the loop never ends.
+            counter++;
+        }
     }
 }
