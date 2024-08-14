@@ -2,7 +2,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class BasicSyntax {
-    public static void main() {
+    public static void main(String[] args) {
+        System.out.println("----------------------------------------------");
+        System.out.println("********** *** Basic Syntax *** **********");
+
         // # Starting with Variables
         startingWithVariables();
 
