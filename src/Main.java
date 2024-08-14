@@ -18,6 +18,7 @@ public class Main {
         arrays(); // The length is fixed on initialization
 
         // # ArrayLists
+        arrayLists();
     }
 
     public static void startingWithVariables() {
@@ -94,8 +95,11 @@ public class Main {
 
     public static void conditionals (short age) {
         // # Conditionals
+        System.out.println("----------------------------------------------");
         System.out.println("# Conditionals #");
 
+        System.out.println("Given the age: " + age + " years old.");
+        System.out.println("The individual is a(n):");
         if (age > 18) {
             System.out.println("Adult");
         } else if (age == 18) {
@@ -107,6 +111,7 @@ public class Main {
 
     public static void arrays () {
         // # Arrays
+        System.out.println("----------------------------------------------");
         System.out.println("# Arrays #");
         // -> type[] variableName;
         // There are 2 ways of initializing an array.
@@ -122,10 +127,12 @@ public class Main {
         charArray[0] = 'a';
         System.out.print("Array de chars: ");
         System.out.println(Arrays.toString(charArray));
+        System.out.println("Length: " + charArray.length);
     }
 
     public static void arrayLists () {
         // # ArrayLists
+        System.out.println("----------------------------------------------");
         System.out.println("# ArrayLists #");
 
         // It's a Class from java.util -> Need to import it:
@@ -135,6 +142,27 @@ public class Main {
         // Works as a dynamic list.
 
         // -> ArrayList<type> variableName
+
+        // Inicialização: new ArrayList<type>();
+
+        ArrayList<Integer> integerArrayList = new ArrayList<Integer>();
+
+        // We can add new spaces, since its length is not fixed
+        integerArrayList.add(1);
+        integerArrayList.add(3);
+        integerArrayList.add(5);
+        integerArrayList.add(7);
+
+        System.out.print("ArrayList de inteiros: ");
+        System.out.println(integerArrayList);
+        System.out.print("Size: ");
+        System.out.println(integerArrayList.size());
+        System.out.print("Element at index 2: ");
+        System.out.println(integerArrayList.get(2));
+        System.out.print("Removing element at index 1: ");
+        System.out.println(integerArrayList.remove(1));
+        System.out.print("ArrayList de inteiros: ");
+        System.out.println(integerArrayList);
 
     }
 }
